@@ -16,7 +16,7 @@ class Worker {
     this.daysWorked = daysWorked;
     Worker.amount++;
   }
-  get salary() {
+  getSalary() {
     return this._rate * this._daysWorked;
   }
 
@@ -100,8 +100,9 @@ try {
   console.log(worker1);
   const worker2 = new Worker("Chack", "Norris", 100, 20);
   console.log(worker2);
+  console.log(worker1.getSalary());
 } catch (error) {
   console.log(error.message);
 }
 
-console.log(worker1.getSalary(50, 20));
+console.log(worker1.getSalary());
